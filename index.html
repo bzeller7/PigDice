@@ -1,65 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Play Pig Dice Online for free. No ads. No download required, flash not required.">
-    <title>Play Pig Dice Online</title>
-    <link href="stylesheets/site.css" rel="stylesheet">
+    <meta charset="UTF-8">	
+    <title>Pig Dice Game</title>
+    <link rel="stylesheet" href="dice.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="dice.js"></script>
 </head>
-
 <body>
-    <header>
-        <h1>Pig Dice Game!</h1>
-        <hr>
-    </header>
- 
+    <main>
+        <h1>Let's Play PIG!</h1>
+        <fieldset>
+            <legend>Rules</legend>
+            <ul>
+                <li>First player to 100 wins.</li>
+                <li>Players take turns rolling the die.</li>
+                <li>Turn ends when player rolls a 1 or chooses to hold.</li>
+                <li>If player rolls a 1, they lose all points earned during the turn.</li>
+                <li>If player holds, points earned during the turn are added to their total.</li>
+            </ul>
+        </fieldset>
+        <label for="player1">Player 1</label>
+            <input type="text" id="player1" >
+        <label for="score1">Score</label>
+            <input type="text" id="score1" value="0" disabled><br>
+        <label for="player2">Player 2</label>
+            <input type="text" id="player2">  
+        <label for="score2">Score</label>
+            <input type="text" id="score2" value="0" disabled>
+        <input type="button" id="new_game" value="New Game"><br>
+            
+        <section id="turn">
+            <p><span id="current">&nbsp;</span>'s turn</p>
+            <input type="button" id="roll" value="Roll">
+            <input type="button" id="hold" value="Hold">
     
-    <div id="gameBoard">
-        <div id="player1Board">
-            <label>Player 1 </label>
-            <img src="Images/PigInWater.jpg" height="100" weight="100" alt="Player 1 Pic. Pig in water">
-            <input type="text" id="player1Score">
-        </div>
-        
-        <div id="player2Board">
-            <label>Player #2 </label>
-            <img src="Images/CagedPig.jpg" height="100" weight="150" alt="Player 2 Pic. pig Caged">
-            <input type="text" id"player2Score">
-        </div>
-        <div>
-            <!-- Dice roll Area -->
-        </div>
-        <div id="gameButtons">
-            <label>Current Turn Score:</label>
-            <input type="text" id="turnScore">
-            <br><br>
-
-            <div id="buttons">
-                <button id="roll" type="button">Roll</button>
-                <button id="pass" type="button">Pass</button>
-            </div>
-        </div>
-    </div>
-    <section id="gameRules">
-        <h2>Pig Dice Rules</h2>
-        <div id="rules">
-            On a turn, a player rolls the die repeatedly. <br>
-            The goal is to accumulate as many points as possible, adding up the numbers rolled on the die.<br>
-             However, if a player rolls a 1, the player's turn is over and any points they have accumulated during this turn are forfeited. 
-            <br>
-            Rolling a 1 doesn't wipe out your entire score, just the total earned during that particular roll.
-            <br> <br>
-            A player can also choose to hold (stop rolling) if they do not want to take a chance of rolling a 1 and losing all of their points from this turn. <br>
-            If the player chooses to hold, all of the points rolled during that turn are added to his or her score.
-            <br>
-            When a player reaches a total of 100 or more points, the game ends and that player is the winner.
-        </div>
-    </section>
-    <section id="output">
-
-    </section>
-    <script src="scripts/code.js"></script>
+            <label for="die">Die</label>
+                <input type="text" id="die" disabled>
+            <label for="total">Total</label>
+                <input type="text" id="total" disabled> 
+        </section>
+    </main>
 </body>
 </html>
