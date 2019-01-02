@@ -1,0 +1,12 @@
+{
+    "files": [
+        "typescript/Game.ts",
+        "typescript/Main.ts"
+    ],
+    "compilerOptions": {
+        "removeComments": true,
+        "target": "es2016",
+        "watch" : true,
+        "outFile": "scripts/code.js"
+    }
+}

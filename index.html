@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Play Pig Dice Online for free. No ads. No download required, flash not required.">
+    <title>Play Pig Dice Online</title>
+    <link href="stylesheets/site.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Pig Dice Game!</h1>
+        <hr>
+    </header>
+ 
+    
+    <div id="gameBoard">
+        <div id="player1Board">
+            <label>Player 1 </label>
+            <img src="Images/PigInWater.jpg" height="100" weight="100" alt="Player 1 Pic. Pig in water">
+            <input type="text" id="player1Score">
+        </div>
+        
+        <div id="player2Board">
+            <label>Player #2 </label>
+            <img src="Images/CagedPig.jpg" height="100" weight="150" alt="Player 2 Pic. pig Caged">
+            <input type="text" id"player2Score">
+        </div>
+        <div>
+            <!-- Dice roll Area -->
+        </div>
+        <div id="gameButtons">
+            <label>Current Turn Score:</label>
+            <input type="text" id="turnScore">
+            <br><br>
+
+            <div id="buttons">
+                <button id="roll" type="button">Roll</button>
+                <button id="pass" type="button">Pass</button>
+            </div>
+        </div>
+    </div>
+    <section id="gameRules">
+        <h2>Pig Dice Rules</h2>
+        <div id="rules">
+            On a turn, a player rolls the die repeatedly. <br>
+            The goal is to accumulate as many points as possible, adding up the numbers rolled on the die.<br>
+             However, if a player rolls a 1, the player's turn is over and any points they have accumulated during this turn are forfeited. 
+            <br>
+            Rolling a 1 doesn't wipe out your entire score, just the total earned during that particular roll.
+            <br> <br>
+            A player can also choose to hold (stop rolling) if they do not want to take a chance of rolling a 1 and losing all of their points from this turn. <br>
+            If the player chooses to hold, all of the points rolled during that turn are added to his or her score.
+            <br>
+            When a player reaches a total of 100 or more points, the game ends and that player is the winner.
+        </div>
+    </section>
+    <section id="output">
+
+    </section>
+    <script src="scripts/code.js"></script>
+</body>
+</html>
